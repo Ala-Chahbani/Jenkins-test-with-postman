@@ -57,6 +57,11 @@ pipeline {
                         reportName: 'Newman Report'
                     ])
 
+                    // envoie un mail 
+                    emailext body: 'Test Message',
+                        subject: 'Test Subject',
+                        to: 'aloulouchahbanialadin19992712@gmail.com'
+
                     // Test de newman avec l'environnement de test utilisé
                     bat 'npx newman run https://api.postman.com/collections/%TEST_ENV%'
                  }

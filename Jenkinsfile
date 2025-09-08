@@ -56,6 +56,9 @@ pipeline {
                         reportFiles: '*.html',
                         reportName: 'Newman Report'
                     ])
+
+                    // Test de newman avec l'environnement de test utilisé
+                    bat 'npx newman run https://api.postman.com/collections/%TEST_ENV%'
                  }
              }
         }

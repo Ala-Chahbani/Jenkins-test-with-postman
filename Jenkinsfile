@@ -64,3 +64,5 @@ pipeline {
         }
     }
 }
+
+// commentaire ajouté pour vérifier le lancement auto de build après push

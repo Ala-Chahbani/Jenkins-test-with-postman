@@ -26,6 +26,12 @@ pipeline {
                 bat 'npm install -g newman-reporter-htmlextra'
              }
         }
+
+        stage("Vérification de l'environnement de test utilisé") {
+            steps {
+                bat 'echo %TEST_ENV%'
+            }
+        }
         
         stage("Run API tests") {
             steps {
